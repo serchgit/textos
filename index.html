@@ -18,25 +18,46 @@
     
     <link href="css/circletimer.css" rel="stylesheet">
   </head>
-  <style>
-  
-  </style>
   <body>
-    <section class="menu d-flex justify-content-center align-items-center">
-     <h1 class="display-4 text-center">TEXTOS</h1>
+    <section class="menu">
+     <div class="text-center">
+       <h1 class="display-4 text-center text-white pt-3">TEXTOS</h1>
+       <button class="reordenar btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+     </div>
+     <div class="botones-text d-flex justify-content-between flex-wrap p-5">
+       <button data-cita="1">1</button>
+       <button data-cita="2">2</button>
+       <button data-cita="3">3</button>
+       <button data-cita="4">4</button>
+       <button data-cita="5">5</button>
+       <button data-cita="6">6</button>
+       <button data-cita="7">7</button>
+       <button data-cita="8">8</button>
+       <button data-cita="9">9</button>
+       <button data-cita="10">10</button>
+     </div>
+     <div class="container">
+       <h2 class="text-center display-4 text-secondary">Cita</h2>
+     </div>
     </section>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/alertas.js"></script>
     <script src="js/toastr.min.js"></script>
     <script src="js/circletimer.min.js"></script>
     <script>
+  var citas = ["Cita:1", "Cita:2", "Cita:3", "Cita:4", "Cita:5", "Cita:6", "Cita:7","Cita:8","Cita:9","Cita:10"];
+  // var countrys = ["Japan", "Korea", "Spain", "England", "China", "Singapur","Rumania"];
+  // var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
+  for (var n = 0; n < citas.length; n++) {
+      document.write("La cita " + (n+1) + " es " + citas[Math.floor(Math.random() * citas.length)]+ "<br>");
+  }
       $(document).ready(function() {
       // alerta('Se guardo','correcto');
 

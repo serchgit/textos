@@ -1,0 +1,28 @@
+.menu{
+	height: 100vh;
+	background-image: url('../images/fondopasto.jpg');
+	background-size: 100%;
+}
+.menu h1{
+	text-shadow: 1px 2px 3px #4444;
+}
+.botones-text{
+	width: 90%;
+	margin:0 auto;
+}
+.botones-text button{
+	width: 3rem;
+	height: 3rem;
+	background: none;
+	color:#fff;
+	border-radius: 50%;
+	cursor:pointer;
+	transition: .5s;
+	text-shadow: 2px 2px #000;
+}
+.botones-text button:hover{
+	background: rgba(255,255,255,.3);
+}
+.botones-text button:focus{
+	outline: none;
+}
