@@ -21,7 +21,7 @@
   <body>
     <section class="menu">
      <div class="text-center">
-       <h1 class="display-4 text-center text-white pt-3">TEXTOS</h1>
+       <h1 class="display-4 text-center text-white py-3">TEXTOS</h1>
        <button class="reordenar btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
      </div>
      <div class="botones-text d-flex justify-content-between flex-wrap p-5">
@@ -55,7 +55,7 @@
     <script src="js/circletimer.min.js"></script>
     <script>
       function crono(){
-        var modal = `<div class="crono mt-5">
+        var modal = `<div class="crono mt-4">
                         <div class="example">
                           <div id="example-timer"></div>
                           <p>Tiempo trascurrido: <span id="time-elapsed">0</span>ms</p>
@@ -71,7 +71,7 @@
                         // alert("Tiempo fin de la ronda!");
                         $(".crono").remove();
                         var numtext = sessionStorage.getItem('numero');
-                        $('.citas').html('<h2 class="display-4">'+textos[numtext-1]+'</h2>')
+                        $('.citas').html('<h2 class="display-4 pt-5" style="font-size:3rem;text-shadow: 2px 2px 3px #000;">'+textos[numtext-1]+'</h2>')
                       },
                       onUpdate: function(elapsed) {
                         $("#time-elapsed").html(Math.round(elapsed));
@@ -104,8 +104,8 @@
   // for (var n = 0; n < citas.length; n++) {
   //     document.write("La cita " + (n+1) + " es " + citas[Math.floor(Math.random() * citas.length)]+ "<br>");
   // }
-  var citastext = ["Cita 1:1", "Cita 2:2", "Cita 3:3", "Cita 4:4", "Cita 5:5", "Cita 6:6","Cita 7:7","Cita 8:8","Cita 9:9","Cita 10:10"];
-  var textos = ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam enim ea ratione rerum fugiat repudiandae eaque sapiente a ipsa cita 1", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nam mollitia vero, omnis beatae officia ratione nihil hic reiciendis. cita 2", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ad, blanditiis magnam quis nemo dignissimos, fuga fugiat accusamus officia cita 3", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut accusantium, cumque perspiciatis voluptatum minus necessitatibus libero excepturi veniam id cita 4", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odio quam dolor fugit, perferendis ipsa nihil veritatis est fugiat cita 5", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus atque culpa aut molestias consequatur laboriosam minima distinctio labore aliquid ut.", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta quis unde magni eveniet, iste. Architecto perferendis assumenda ducimus illum.","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis enim vero maiores, esse soluta ab explicabo molestiae pariatur laudantium.","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda optio amet neque aperiam ab magnam doloremque labore minus repellendus ad!","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ex quis at maiores temporibus minus dolorem officiis voluptates sequi enim."];
+  var citastext = ["Apocalipsis 1:3", "Josué 3:5", "Exodo 8:6", "1 Corintios 5:4", "Romanos 10:10", "Mateo 15:11","Galatas 6:2","Isaias 30:18","Daniel 4:2","Hebreos 11:1"];
+  var textos = ["Bienaventurado el que lee, y los que oyen las palabras de esta profecía, y guardan las cosas en ella escritas; porque el tiempo está cerca.", "Y Josué dijo al pueblo: Santificaos, porque Jehová hará mañana maravillas entre vosotros.", "Entonces Aarón extendió su mano sobre las aguas de Egipto, y subieron ranas que cubrieron la tierra de Egipto.", "En el nombre de nuestro Señor Jesucristo, reunidos vosotros y mi espíritu, con el poder de nuestro Señor Jesucristo", "Porque con el corazón se cree para justicia, pero con la boca se confiesa para salvación", "No lo que entra en la boca contamina al hombre; mas lo que sale de la boca, esto contamina al hombre", "Sobrellevad los unos las cargas de los otros, y cumplid así la ley de Cristo","Porque este pueblo es rebelde, hijos mentirosos, hijos que no quisieron oír la ley de Jehová","Conviene que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo","Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve"];
   
   $('.reordenar').click(function(event) {
   $('.citas').html('');
