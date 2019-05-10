@@ -32,7 +32,7 @@
 .botones-text button:after{
 	content: '';
 	position:absolute;
-	height: .5rem;
+	height: .4rem;
 	width: 2.5rem;
 	/*border:1px solid #fff;*/
 	border-radius: 50%;
