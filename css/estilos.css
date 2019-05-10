@@ -11,6 +11,8 @@
 	margin:0 auto;
 }
 .botones-text button{
+	margin-top: 10px;
+	margin-left: 30px;
 	width: 3.5rem;
 	height: 3.5rem;
 	background: none;
@@ -56,4 +58,67 @@ text-align: center;
 }
 #start,#pause,#stop{
 	width: 3rem;
+}
+@media (max-width: 1024px){
+	h1{
+		font-size: 2rem!important;
+	}
+	.botones-text{
+	width: 95%;
+	}
+	.botones-text button{
+	width: 3rem;
+	height: 3rem;
+	}
+	.botones-text button:after{
+	height: .3rem;
+	width: 2rem;
+	left: 8px;
+	bottom:9px;
+
+	}
+	h2{
+		font-size: 2rem !important;
+	}
+	.citas h2{
+		font-size: 1.7rem !important;
+	}
+	#example-timer {
+	height: 80px;
+	margin: 10px auto;
+	width: 80px;
+	}
+	.crono{
+		margin-top:1rem;
+	}
+	.btn-sm{
+		padding: .2rem .2rem;
+    font-size: .700rem;
+    line-height: 1;
+    border-radius: .2rem;
+	}
+}
+@media (max-width: 886px){
+	.botones-text button{
+	width: 2rem;
+	height: 2rem;
+	margin-left: 20px;
+	}
+	.botones-text button:after{
+	height: .1rem;
+	width: 1.5rem;
+	left: 4px;
+	bottom:5px;
+	
+	}
+	h2{
+		font-size: 1.7rem !important;
+	}
+	.citas h2{
+		font-size: 1.4rem !important;
+	}
+	.menu{
+    background-size: 290%;
+    background-position-x: 50%;
+	}
 }

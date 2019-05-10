@@ -24,7 +24,7 @@
        <h1 class="display-4 text-center text-white py-3">TEXTOS</h1>
        <button class="reordenar btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
      </div>
-     <div class="botones-text d-flex justify-content-between flex-wrap p-5">
+     <div class="botones-text d-flex justify-content-between flex-wrap p-4">
        <button data-cita="1">1</button>
        <button data-cita="2">2</button>
        <button data-cita="3">3</button>
@@ -35,6 +35,28 @@
        <button data-cita="8">8</button>
        <button data-cita="9">9</button>
        <button data-cita="10">10</button>
+       <button data-cita="1">1</button>
+       <button data-cita="2">2</button>
+       <button data-cita="3">3</button>
+       <button data-cita="4">4</button>
+       <button data-cita="5">5</button>
+       <button data-cita="6">6</button>
+       <button data-cita="7">7</button>
+       <button data-cita="8">8</button>
+       <button data-cita="9">9</button>
+       <button data-cita="10">10</button>
+       <button data-cita="10">10</button>
+       <button data-cita="1">1</button>
+       <button data-cita="2">2</button>
+       <button data-cita="3">3</button>
+       <button data-cita="4">4</button>
+       <button data-cita="5">5</button>
+       <button data-cita="6">6</button>
+       <button data-cita="7">7</button>
+       <button data-cita="8">8</button>
+       <button data-cita="9">9</button>
+       <button data-cita="10">10</button>
+
      </div>
      <div class="container cont-texto">
        <h2 class="text-center display-4 text-secondary cita">Listo!</h2>
@@ -58,7 +80,7 @@
         var modal = `<div class="crono mt-4">
                         <div class="example">
                           <div id="example-timer"></div>
-                          <p>Tiempo trascurrido: <span id="time-elapsed">0</span>ms</p>
+                          <p class="m-0">Tiempo trascurrido: <span id="time-elapsed">0</span>ms</p>
                           <button class="inicio btn btn-sm btn-outline-success" id="start"><i class="fa fa-play"></i></button>
                           <button class="Pause btn btn-sm btn-outline-warning" id="pause"><i class="fa fa-pause"></i></button>
                           <!-- <button class="alto btn btn-sm btn-outline-danger" id="stop"><i class="fa fa-stop"></i></button>-->
@@ -71,7 +93,7 @@
                         // alert("Tiempo fin de la ronda!");
                         $(".crono").remove();
                         var numtext = sessionStorage.getItem('numero');
-                        $('.citas').html('<h2 class="display-4 pt-5" style="font-size:3rem;text-shadow: 2px 2px 3px #000;">'+textos[numtext-1]+'</h2>')
+                        $('.citas').html('<h2 class="display-4 pt-4" style="font-size:3rem;text-shadow: 2px 2px 3px #000;">'+textos[numtext-1]+'</h2>')
                       },
                       onUpdate: function(elapsed) {
                         $("#time-elapsed").html(Math.round(elapsed));
