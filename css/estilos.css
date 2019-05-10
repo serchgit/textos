@@ -1,5 +1,5 @@
 .menu{
-	height: 100vh;
+	min-height: 100vh;
 	background-image: url('../images/fondopasto.jpg');
 	background-size: 100%;
 }
@@ -12,9 +12,9 @@
 }
 .botones-text button{
 	margin-top: 10px;
-	margin-left: 30px;
-	width: 3.5rem;
-	height: 3.5rem;
+	margin-left: 25px;
+	width: 3.2rem;
+	height: 3.2rem;
 	background: none;
 	color:#fff;
 	border-radius: 50%;
@@ -40,8 +40,8 @@
 	background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	left: 8px;
-	bottom:9px;
+	left: 5px;
+	bottom:8px;
 
 }
 .reordenar{
@@ -91,7 +91,7 @@ text-align: center;
 	.crono{
 		margin-top:1rem;
 	}
-	.btn-sm{
+	.inicio,.Pause{
 		padding: .2rem .2rem;
     font-size: .700rem;
     line-height: 1;
