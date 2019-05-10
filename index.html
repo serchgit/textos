@@ -36,8 +36,11 @@
        <button data-cita="9">9</button>
        <button data-cita="10">10</button>
      </div>
-     <div class="container">
-       <h2 class="text-center display-4 text-secondary">Cita</h2>
+     <div class="container cont-texto">
+       <h2 class="text-center display-4 text-secondary cita">Listo!</h2>
+     </div>
+     <div class="citas container text-white text-center">
+       
      </div>
     </section>
 
@@ -51,13 +54,83 @@
     <script src="js/toastr.min.js"></script>
     <script src="js/circletimer.min.js"></script>
     <script>
-  var citas = ["Cita:1", "Cita:2", "Cita:3", "Cita:4", "Cita:5", "Cita:6", "Cita:7","Cita:8","Cita:9","Cita:10"];
-  // var countrys = ["Japan", "Korea", "Spain", "England", "China", "Singapur","Rumania"];
+      function crono(){
+        var modal = `<div class="crono mt-5">
+                        <div class="example">
+                          <div id="example-timer"></div>
+                          <p>Tiempo trascurrido: <span id="time-elapsed">0</span>ms</p>
+                          <button class="inicio btn btn-sm btn-outline-success" id="start"><i class="fa fa-play"></i></button>
+                          <button class="Pause btn btn-sm btn-outline-warning" id="pause"><i class="fa fa-pause"></i></button>
+                          <!-- <button class="alto btn btn-sm btn-outline-danger" id="stop"><i class="fa fa-stop"></i></button>-->
+                          
+                        </div>
+                    </div>`;
+                    setTimeout(function(){
+                      $("#example-timer").circletimer({
+                      onComplete: function() {
+                        // alert("Tiempo fin de la ronda!");
+                        $(".crono").remove();
+                        var numtext = sessionStorage.getItem('numero');
+                        $('.citas').html('<h2 class="display-4">'+textos[numtext-1]+'</h2>')
+                      },
+                      onUpdate: function(elapsed) {
+                        $("#time-elapsed").html(Math.round(elapsed));
+                      },
+                      timeout: 5000
+                    });
+
+                    $("#start").on("click", function() {
+                      $("#example-timer").circletimer("start");
+                    });
+
+                    $("#pause").on("click", function() {
+                      $("#example-timer").circletimer("pause");
+                    });
+
+                    $("#stop").on("click", function() {
+                      $("#example-timer").circletimer("stop");
+                      $("#acabo").addClass("msjend")
+                    });
+
+                    $("#add").on("click", function() {
+                      $("#example-timer").circletimer("add", 5000);
+                    });
+                    $('#start').click();
+                    },100);
+      $('.citas').append(modal);
+      }
   // var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
+  // for (var n = 0; n < citas.length; n++) {
+  //     document.write("La cita " + (n+1) + " es " + citas[Math.floor(Math.random() * citas.length)]+ "<br>");
+  // }
+  var citastext = ["Cita 1:1", "Cita 2:2", "Cita 3:3", "Cita 4:4", "Cita 5:5", "Cita 6:6","Cita 7:7","Cita 8:8","Cita 9:9","Cita 10:10"];
+  var textos = ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam enim ea ratione rerum fugiat repudiandae eaque sapiente a ipsa cita 1", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nam mollitia vero, omnis beatae officia ratione nihil hic reiciendis. cita 2", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ad, blanditiis magnam quis nemo dignissimos, fuga fugiat accusamus officia cita 3", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut accusantium, cumque perspiciatis voluptatum minus necessitatibus libero excepturi veniam id cita 4", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odio quam dolor fugit, perferendis ipsa nihil veritatis est fugiat cita 5", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus atque culpa aut molestias consequatur laboriosam minima distinctio labore aliquid ut.", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta quis unde magni eveniet, iste. Architecto perferendis assumenda ducimus illum.","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis enim vero maiores, esse soluta ab explicabo molestiae pariatur laudantium.","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda optio amet neque aperiam ab magnam doloremque labore minus repellendus ad!","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ex quis at maiores temporibus minus dolorem officiis voluptates sequi enim."];
+  
+  $('.reordenar').click(function(event) {
+  $('.citas').html('');
+  $('.botones-text').html('');
+  $('.botones-text button').removeAttr('disabled').css('background','none');
+  $('.cita').html('Listo!')
+  var citas = [1, 2, 3, 4, 5, 6, 7,8,9,10];
   for (var n = 0; n < citas.length; n++) {
-      document.write("La cita " + (n+1) + " es " + citas[Math.floor(Math.random() * citas.length)]+ "<br>");
+      // $('.citas').append("La cita " + (n+1) + " es " + citas[Math.floor(Math.random() * citas.length)]+ "<br>");
+      // $('.botones-text button').attr('data-cita', (n+1)+ citas[Math.floor(Math.random() * citas.length)]);
+      $('.botones-text').append(`<button data-cita="${citas[Math.floor(Math.random() * citas.length)]}">${n+1}</button>`);
   }
+  });
+
+  $('.botones-text').on('click','button',function(){
+    $('.citas').html('');
+    $(this).attr('disabled', 'disabled').css('background','rgba(255,255,255,.3)');
+    var textonum = $(this).attr('data-cita');
+    var citatexto = citastext[textonum-1];
+    sessionStorage.setItem('numero',textonum)
+
+    $('.cita').html(citatexto);
+    crono();
+
+  });
       $(document).ready(function() {
       // alerta('Se guardo','correcto');
 

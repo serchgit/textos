@@ -11,18 +11,49 @@
 	margin:0 auto;
 }
 .botones-text button{
-	width: 3rem;
-	height: 3rem;
+	width: 3.5rem;
+	height: 3.5rem;
 	background: none;
 	color:#fff;
 	border-radius: 50%;
 	cursor:pointer;
 	transition: .5s;
 	text-shadow: 2px 2px #000;
+	position: relative;
 }
 .botones-text button:hover{
 	background: rgba(255,255,255,.3);
 }
 .botones-text button:focus{
 	outline: none;
+}
+.botones-text button:after{
+	content: '';
+	position:absolute;
+	height: .5rem;
+	width: 2.5rem;
+	/*border:1px solid #fff;*/
+	border-radius: 50%;
+	background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	left: 8px;
+	bottom:9px;
+
+}
+.reordenar{
+	background: none;
+}
+#example-timer {
+height: 150px;
+margin: 20px auto;
+width: 150px;
+}
+.example {
+text-align: center;
+/*margin-top: 4%;*/
+}
+#start,#pause,#stop{
+	width: 3rem;
 }
