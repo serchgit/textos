@@ -25,13 +25,13 @@
        <button class="reordenar btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
      </div>
      <div class="botones-text d-flex justify-content-between flex-wrap p-4">
-       <button data-cita="1">1</button>
-       <button data-cita="2">2</button>
-       <button data-cita="3">3</button>
-       <button data-cita="4">4</button>
-       <button data-cita="5">5</button>
-       <button data-cita="6">6</button>
-       <button data-cita="7">7</button>
+       <button data-cita="1" class="uno">1</button>
+       <button data-cita="2" class="dos">2</button>
+       <button data-cita="3" class="tres">3</button>
+       <button data-cita="4" class="cuatro">4</button>
+       <button data-cita="5" class="cinco">5</button>
+       <button data-cita="6" class="seis">6</button>
+       <button data-cita="7" class="siete">7</button>
        <!-- <button data-cita="8">8</button>
        <button data-cita="9">9</button>
        <button data-cita="10">10</button> -->
@@ -125,13 +125,40 @@
   $('.botones-text').html('');
   $('.botones-text button').removeAttr('disabled').css('background','none');
   $('.cita').html('Listo!')
-  var citas = [1, 2, 3, 4, 5, 6, 7];
-  for (var n = 0; n < citas.length; n++) {
+  // var citas = [1, 2, 3, 4, 5, 6, 7];
+  // for (var n = 0; n < citas.length; n++) {
       // $('.citas').append("La cita " + (n+1) + " es " + citas[Math.floor(Math.random() * citas.length)]+ "<br>");
       // $('.botones-text button').attr('data-cita', (n+1)+ citas[Math.floor(Math.random() * citas.length)]);
-      $('.botones-text').append(`<button data-cita="${citas[Math.floor(Math.random() * citas.length)]}">${n+1}</button>`);
-  }
+      // $('.botones-text').append(`<button data-cita="${citas[Math.floor(Math.random() * citas.length)]}">${n+1}</button>`);
+  // }
+  var myArray = ['1','2','3','4','5','6','7'];
+
+    var i,j,k;
+    for (i = myArray.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        k = myArray[i - 1];
+        myArray[i - 1] = myArray[j];
+        myArray[j] = k;
+    }
+
+
+console.log("números aleatorios : " + myArray);
+var uno = myArray.slice(0,1);
+var dos = myArray.slice(1,2);
+var tres = myArray.slice(2,3);
+var cuatro = myArray.slice(3,4);
+var cinco = myArray.slice(4,5);
+var seis = myArray.slice(5,6);
+var siete = myArray.slice(6,7);
+  $('.botones-text').html(`<button data-cita="${uno.toString()}" class="uno">1</button>
+                           <button data-cita="${dos.toString()}" class="dos">2</button>
+                           <button data-cita="${tres.toString()}" class="tres">3</button>
+                           <button data-cita="${cuatro.toString()}" class="cuatro">4</button>
+                           <button data-cita="${cinco.toString()}" class="cinco">5</button>
+                           <button data-cita="${seis.toString()}" class="seis">6</button>
+                           <button data-cita="${siete.toString()}" class="siete">7</button>`)
   });
+  
 
   $('.botones-text').on('click','button',function(){
     $('.citas').html('');
