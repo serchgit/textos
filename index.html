@@ -32,9 +32,10 @@
        <button data-cita="5" class="cinco">5</button>
        <button data-cita="6" class="seis">6</button>
        <button data-cita="7" class="siete">7</button>
-       <!-- <button data-cita="8">8</button>
+       <button data-cita="8">8</button>
        <button data-cita="9">9</button>
-       <button data-cita="10">10</button> -->
+       <button data-cita="10">10</button>
+       <button data-cita="11">11</button>
      </div>
      <div class="container cont-texto">
        <h2 class="text-center display-4 text-secondary cita">Listo!</h2>
@@ -110,7 +111,11 @@
                   "Abdías 1:15",
                   "Jonás 3:10",
                   "Miqueas 3:8",
-                  "Nahúm 1:6"];
+                  "Nahúm 1:6",
+                  "Malaquias 3:18",
+                  "Lucas 8:18",
+                  "Hechos 20:28",
+                  "Mateo 5:39"];
 
   var textos = ["No piensan en convertirse a su Dios, porque espíritu de fornicación está en medio de ellos, y no conocen a Jehová.",
               "Proclamad esto entre las naciones, proclamad guerra, despertad a los valientes, acérquense, vengan todos los hombres de guerra.",
@@ -118,7 +123,11 @@
               "Porque cercano está el día de Jehová sobre todas las naciones; como tú hiciste se hará contigo; tu recompensa volverá sobre tu cabeza.",
               "Y vio Dios lo que hicieron, que se convirtieron de su mal camino; y se arrepintió del mal que había dicho que les haría, y no lo hizo.",
               "Mas yo estoy lleno de poder del Espíritu de Jehová, y de juicio y de fuerza, para denunciar a Jacob su rebelión, y a Israel su pecado.",
-              "¿Quién permanecerá delante de su ira? ¿y quién quedará en pie en el ardor de su enojo? Su ira se derrama como fuego, y por él se hienden las peñas."];
+              "¿Quién permanecerá delante de su ira? ¿y quién quedará en pie en el ardor de su enojo? Su ira se derrama como fuego, y por él se hienden las peñas.",
+              "Entonces os volveréis, y discerniréis la diferencia entre el justo y el malo, entre el que sirve a Dios y el que no le sirve.",
+              "Mirad, pues, cómo oís; porque a todo el que tiene, se le dará; y a todo el que no tiene, aun lo que piensa tener se le quitará.",
+              "Por tanto, mirad por vosotros, y por todo el rebaño en que el Espíritu Santo os ha puesto por obispos, para apacentar la iglesia del Señor, la cual él ganó por su propia sangre.",
+              "Pero yo os digo: No resistáis al que es malo; antes, a cualquiera que te hiera en la mejilla derecha, vuélvele también la otra;"];
   
   $('.reordenar').click(function(event) {
   $('.citas').html('');
@@ -131,7 +140,7 @@
       // $('.botones-text button').attr('data-cita', (n+1)+ citas[Math.floor(Math.random() * citas.length)]);
       // $('.botones-text').append(`<button data-cita="${citas[Math.floor(Math.random() * citas.length)]}">${n+1}</button>`);
   // }
-  var myArray = ['1','2','3','4','5','6','7'];
+  var myArray = ['1','2','3','4','5','6','7','8','9','10','11'];
 
     var i,j,k;
     for (i = myArray.length; i; i--) {
@@ -150,13 +159,22 @@ var cuatro = myArray.slice(3,4);
 var cinco = myArray.slice(4,5);
 var seis = myArray.slice(5,6);
 var siete = myArray.slice(6,7);
+var ocho = myArray.slice(7,8);
+var nueve = myArray.slice(8,9);
+var diez = myArray.slice(9,10);
+var once = myArray.slice(10,11);
   $('.botones-text').html(`<button data-cita="${uno.toString()}" class="uno">1</button>
                            <button data-cita="${dos.toString()}" class="dos">2</button>
                            <button data-cita="${tres.toString()}" class="tres">3</button>
                            <button data-cita="${cuatro.toString()}" class="cuatro">4</button>
                            <button data-cita="${cinco.toString()}" class="cinco">5</button>
                            <button data-cita="${seis.toString()}" class="seis">6</button>
-                           <button data-cita="${siete.toString()}" class="siete">7</button>`)
+                           <button data-cita="${siete.toString()}" class="siete">7</button>
+                           <button data-cita="${ocho.toString()}" class="siete">8</button>
+                           <button data-cita="${nueve.toString()}" class="siete">9</button>
+                           <button data-cita="${diez.toString()}" class="siete">10</button>
+                           <button data-cita="${once.toString()}" class="siete">11</button>
+                           `)
   });
   
 
